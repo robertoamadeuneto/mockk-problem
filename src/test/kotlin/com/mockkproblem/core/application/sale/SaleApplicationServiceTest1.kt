@@ -22,7 +22,7 @@ class SaleApplicationServiceTest1 : DescribeSpec() {
     init {
         describe("Authorize Sale") {
             context("Authorize valid Sale") {
-                it("This case is supposed to succeed, but it isn't") {
+                it("This case is supposed to succeed, but it 's failing") {
                     every { authorizationPort.authorizeSaleExternally(any()) } returns Unit
 
                     saleApplicationService.authorizeSale()
@@ -31,7 +31,7 @@ class SaleApplicationServiceTest1 : DescribeSpec() {
                     confirmVerified(authorizationPort)
                 }
 
-                it("This case is supposed to fail, but it isn't") {
+                it("This case is supposed to fail, but it's succeeding") {
                     every { authorizationPort.authorizeSaleExternally(any()) } returns Unit
 
                     saleApplicationService.authorizeSale()

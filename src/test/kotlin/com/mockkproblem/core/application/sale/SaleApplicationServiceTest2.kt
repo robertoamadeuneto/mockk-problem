@@ -24,7 +24,7 @@ class SaleApplicationServiceTest2 {
     }
 
     @Test
-    fun shouldSucceedAuthorizingSale() {
+    fun shouldSucceedButItsFailing() {
         every { authorizationPort.authorizeSaleExternally(any()) } returns Unit
 
         saleApplicationService.authorizeSale()
@@ -34,7 +34,7 @@ class SaleApplicationServiceTest2 {
     }
 
     @Test
-    fun shouldFailAuthorizingSale() {
+    fun shouldFailButItsSucceeding() {
         every { authorizationPort.authorizeSaleExternally(any()) } returns Unit
 
         saleApplicationService.authorizeSale()
